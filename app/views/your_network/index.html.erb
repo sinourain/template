@@ -1,0 +1,383 @@
+<section class="section" id="section1">
+    <div class="container-fluid">
+        <div id="logo">
+          <%= image_tag "your_network/distrivending.png", :width => '18%' %>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="intro">
+          <h1 class="shadow">Distrivending Group</h1>
+          <%- if user_signed_in? %>
+              <a class="btn-default" href="<%= edit_user_registration_path %>">
+                <i class="fa fa-user"></i>
+                Editar Perfil
+              </a>
+
+              <a class="btn-default" href="/">
+                Invitar un amigo
+                <i class="fa fa-friend"></i>
+              </a>
+          <% else %>
+              <a class="btn-default" href="<%= new_user_session_path %>">
+                <i class="fa fa-user"></i>
+                Acceder
+              </a>
+
+              <a class="btn-default" href="<%= new_user_registration_path %>">
+                Registrarse
+                <i class="fa fa-asterisk"></i>
+              </a>
+          <% end %>
+          <a class="btn-default" href="#section2">
+            Conocer <span>Mas</span>
+            <i class="fa fa-arrow-down"></i>
+          </a>
+        </div><!-- /small-6 columns -->
+    </div><!-- /container-fluid -->
+</section><!-- /section -->
+<div id="welcome">
+    <div class="container-fluid">
+        <h2>Tu libertad Ahora.</h2>
+    </div>
+</div>
+<section class="section" id="section2" data-section="2">
+    <div class="container-fluid">
+        <div class="row title">
+            <div class="small-7 columns">
+                <h2>Plan de Negocios</h2>
+            </div><!-- /span4 -->
+            <div class="small-5 columns hidden-phone">
+                <hr>
+            </div><!-- /span8 -->
+        </div><!-- /row-fluid -->
+        <div class="row abstract">
+            <div class="small-7 columns">
+                <p>Nuestro proposito es brindarle a la sociedad una opción de negocio que genere la posibilidad
+                de alcanzar la libertad financiera de una manera más ágil.</p>
+                <p>Es una oportunidad para tener unos ingresos adicionales a los que nos genera nuestra actividad
+                 cotidiana y que te ayuda a conseguir ingresos de tipo residual mientras alcanzas tus metas y sueños.</p>
+            </div><!-- /span8 -->
+            <div class="small-5 columns">
+                <%= image_tag "your_network/business-finger-WEB.jpg", :width => '100%'%>
+            </div><!-- /span4 -->
+        </div><!-- /row-fluid -->
+        <div class="row content">
+            <div class="small-12">
+                <div class="row">
+                    <div class="small-4 columns service">
+                        <p>
+                          <%= image_tag "your_network/business-icon.png", :width => '95px'%>
+                        </p>
+                        <p><b>TU NEGOCIO</b></p>
+                        <ul>
+                            <li>Networkers</li>
+                            <li>Marketing</li>
+                            <li>E-Commerce</li>
+                            <li>Libertad Financiera</li>
+                        </ul>
+                        <br>
+                    </div>
+
+                    <div class="small-4 columns service">
+                        <p>
+                          <%= image_tag "your_network/money-jar-icon.png", :width => '95px'%>
+                        </p>
+                        <p><b>INVERSIÓN EN ACTIVOS</b></p>
+                        <ul>
+                            <li>Ganancias residuales</li>
+                            <li>Apalancamiento</li>
+                            <li>Acción y Determinación</li>
+                            <li>Sueños</li>
+                        </ul>
+                        <br>
+                    </div>
+
+                    <div class="small-4 columns service">
+                        <p>
+                          <%= image_tag "your_network/guard-icon.png", :width => '95px'%>
+                        </p>
+                        <p><b>SOPORTE</b></p>
+                        <ul>
+                            <li>Información</li>
+                            <li>Capacitación</li>
+                            <li>Control en las inversiones</li>
+                            <li>Gestión del riesgo</li>
+                        </ul>
+                        <br>
+                    </div>
+
+
+                </div><!-- /row-fluid -->
+            </div><!-- /small-12 -->
+        </div><!-- /row-fluid -->
+    </div><!-- /container -->
+</section><!-- /section -->
+
+<section class="section" id="section3" data-section="3">
+    <div class="container-fluid">
+        <div class="row title">
+            <div class="small-10 columns">
+                <h2>Plan de Compensación</h2>
+            </div><!-- /span4 -->
+            <div class="small-2 columns hidden-phone alt">
+                <hr>
+            </div><!-- /span8 -->
+        </div><!-- /row-fluid -->
+
+        <div class="row slide center">
+          <div class="small-3 columns">
+            <%= image_tag "your_network/blue-matreshka-icon.png", :width => '100%'%>
+          </div>
+          <div class="small-3 columns">
+            <%= image_tag "your_network/blue-matreshka-icon.png", :width => '80%'%>
+          </div>
+          <div class="small-2 columns">
+            <%= image_tag "your_network/blue-matreshka-icon.png", :width => '100%'%>
+          </div>
+          <div class="small-2 columns">
+            <%= image_tag "your_network/blue-matreshka-icon.png", :width => '80%'%>
+          </div>
+          <div class="small-2 columns">
+            <%= image_tag "your_network/blue-matreshka-icon.png", :width => '60%'%>
+          </div>
+        </div><!-- /row-fluid -->
+
+        <div class="row slide center">
+            <div class="small-3 columns service">
+                <h6 class="hidden-phone">1. GANA POR CADA MAQUINA INSTALADA</h6>
+                <p>Cada maquina que tengas instalada te puede generar una utilidad mensual entre $20 y $400 (utilidad sujeta al tamaño de la maquina y del sitio donde fue ubicada).</p>
+                <p>Así que ubica tus maquinas en lugares con gran afluencia de personas en tu ciudad y gana mucho dinero.</p>
+                <a class="btn-inverse read-more">
+                    Leer <span>Mas</span>
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div><!-- /span4 -->
+
+            <div class="small-3 columns  service">
+                <h6 class="hidden-phone">2 Y 3. GANA POR COMPRAS DE TU RED</h6>
+                <p>Por la compra de cualquier maquina vending o producto distrivending realizada por tu red de distribución, gana el 10% del primer nivel, el 5% del segundo nivel y el 3% del tercer nivel.</p>
+                <a class="btn-inverse read-more">
+                    Leer <span>Mas</span>
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div><!-- /span4 -->
+
+            <div class="small-3 columns  service">
+                <h6 class="hidden-phone">4. BONO POR META</h6>
+                <p>Recompensando el trabajo, Distrivending premia el exito de los distribuidores. Llega a determinada meta y gana celulares, tablets, viajes, motos, carros y entre otros.</p>
+                <p>Los bonos no son transferibles a ninguna otra persona ni se cambian por efectivo.</p>
+                <a class="btn-inverse read-more">
+                    Leer <span>Mas</span>
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div><!-- /span4 -->
+
+            <div class="small-3 columns  service">
+                <h6 class="hidden-phone">5. VENTA DIRECTA</h6>
+                <p>Por ser un distribuidor todos los productos te salen con un gran descuento que representa un ingreso ágil e inmediato.</p>
+                <a class="btn-inverse read-more">
+                    Leer <span>Mas</span>
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div><!-- /span4 -->
+        </div><!-- /row-fluid -->
+    </div><!-- /container -->
+</section><!-- /section -->
+
+<div id="testimonial">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="small-12 text-center">
+                <p><%= image_tag "your_network/CEO_MichaelYela.jpg", :width => '100px'%></p>
+                <p class="">CEO Maicol Yela</p>
+                <h2>"Trabajar con este gran equipo fue, es y sera una experiencia única y gratificante"</h2>
+            </div><!-- /small-12 -->
+        </div><!-- /row-fluid -->
+    </div><!-- /container-fluid -->
+</div><!-- /testimonial -->
+
+<section class="section" id="section6" data-section="6">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="small-8 columns">
+                <h2>Costo de la Inversión</h2>
+            </div><!-- /span4 -->
+            <div class="small-4 hidden-phone columns">
+                <hr>
+            </div><!-- /span8 -->
+        </div><!-- /row-fluid -->
+        <div class="row">
+            <div class="small-12">
+                <div class="pricing-table-wrapper">
+                    <div class="pricing-table row">
+
+                        <!-- FIRST TABLE -->
+                        <ul class="pricing-column small-4 columns">
+                            <li class="pricing-title">Beginner</li>
+
+                            <li class="pricing-price">$80 <span>/life</span>
+                            </li>
+
+                            <li>Afiliación Distribuidor <i class="fa fa-ok right"></i></li>
+                            <li>Afiliación Codistribuidor <i class="fa fa-ok pull-right"></i></li>
+                            <li>Maquina Vending Pequeña<i class="pull-right"></i></li>
+                            <li>Maquina Vending Grande<i class="pull-right"></i></li>
+                            <li>Recarga Dulces <i class="pull-right"></i></li>
+                            <li>MP3 <i class="pull-right"></i></li>
+
+                            <li class="pricing-button">
+                                <a class="btn-inverse" href="<%= new_user_registration_path %>">Registrate ya!</a>
+                            </li>
+                        </ul>
+
+                        <!-- SECOND TABLE -->
+                        <ul class="pricing-column  small-4 columns">
+                            <li class="pricing-title">Special Offer Silver Maquine!</li>
+
+                            <li class="pricing-price">$250 hasta $850<span>/life</span>
+                            </li>
+
+                            <li>Afiliación Distribuidor <i class="fa fa-ok pull-right"></i></li>
+                            <li>Afiliación Codistribuidor <i class="fa fa-ok pull-right"></i></li>
+                            <li>Maquina Vending Pequeña<i class="fa fa-ok pull-right"></i></li>
+                            <li>Maquina Vending Grande<i class="pull-right"></i></li>
+                            <li>Recarga Dulces <i class="pull-right"></i></li>
+                            <li>MP3 <i class="fa fa-ok pull-right"></i></li>
+
+                              <li class="pricing-button">
+                                <a class="btn-inverse" href="<%= new_user_registration_path %>">Registrate ya!</a>
+                              </li>
+                        </ul>
+
+                        <!-- THIRD TABLE -->
+                        <ul class="pricing-column  small-4 columns">
+                            <li class="pricing-title">Special Offer Gold Machine!</li>
+
+                            <li class="pricing-price">$1000 hasta $2000 <span>/life</span>
+                            </li>
+
+                            <li>Afiliación Distribuidor <i class="fa fa-ok pull-right"></i></li>
+                            <li>Afiliación Codistribuidor <i class="fa fa-ok pull-right"></i></li>
+                            <li>Maquina Vending Pequeña<i class=" pull-right"></i></li>
+                            <li>Maquina Vending Grande<i class="fa fa-ok pull-right"></i></li>
+                            <li>Recarga Dulces <i class="fa fa-ok pull-right"></i></li>
+                            <li>MP3 <i class="fa fa-ok pull-right"></i></li>
+
+                              <li class="pricing-button">
+                                <a class="btn-inverse" href="<%= new_user_registration_path %>">Registrate ya!</a>
+                              </li>
+                        </ul>
+                    </div><!-- /pricing-table-wraper -->
+                </div><!-- /pricing-table -->
+            </div><!-- /small-12 -->
+        </div><!-- /row-fluid -->
+    </div><!-- /container-fluid -->
+</section><!-- /section -->
+
+<div id="twitter" class="hidden-phone">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="small-12">
+                <h2>Nuestros Tweets!</h2>
+                <h4><bold>@sinourain:</bold> Es hora de hacer el negocio <taq>#distrivending #afiliate_ya</taq></h4>
+                <p><bold> Mayo 20, 2014</bold></p>
+                <br>
+            </div><!-- /small-12 -->
+        </div><!-- /row-fluid -->
+    </div><!-- /container-fluid -->
+</div>
+
+<section class="section" id="section5" data-section="5">
+    <div class="container-fluid">
+        <div class="row title">
+            <div class="small-4 columns">
+                <h2>Contacto</h2>
+            </div><!-- /span4 -->
+            <div class="small-8 columns hidden-phone alt">
+                <hr>
+            </div><!-- /span8 -->
+        </div><!-- /row-fluid -->
+        <div class="row content">
+            <div class="small-4 columns">
+                <h4 class="intro">Escribenos!</h4>
+                <p>Tus dudas o comentarios seran atendidas por expertos y son de gran importancia para nosotros.</p>
+                <div class="row alt">
+                    <h5>Correo:</h5>
+                    <span>support@distrivending.com</span>
+                </div><!-- /row -->
+                <div class="row alt">
+                    <h5>Telefono:</h5>
+                    <span>(+57) 2838-4011</span>
+                </div><!-- /row -->
+                <div class="row alt">
+                    <h5>Twitter:</h5>
+                    <span><a href="http://www.twitter.com/distrivending" rel="external">@distrivending</a></span>
+                </div><!-- /row -->
+            </div><!-- /span4 -->
+
+            <div class="small-8 columns">
+
+                <div class="row">
+                    <div class="small-12">
+                    </div><!-- /small-12 -->
+                </div><!-- /row-fluid -->
+
+                <form method="POST" action="#">
+
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <div class="control-group">
+                                <label for="name" class="control-label">Nombre:</label>
+                                <div class="controls">
+                                    <input class="small-12" type="text" name="contact_name" id="name">
+                                </div><!-- /controls -->
+                            </div><!-- /control-group -->
+                        </div><!-- /small-6 columns -->
+                        <div class="small-6 columns">
+                            <div class="control-group">
+                                <label for="email" class="control-label">Correo:</label>
+                                <div class="controls">
+                                    <input class="small-12" type="email" name="contact_email" id="email">
+                                </div><!-- /controls -->
+                            </div><!-- /control-group -->
+                        </div><!-- /small-6 columns -->
+                    </div><!-- /row-fluid -->
+
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <div class="control-group">
+                                <label for="phone" class="control-label">Numero de Telefono:</label>
+                                <div class="controls">
+                                    <input class="small-12" type="tel" name="contact_phone" id="phone">
+                                </div><!-- /controls -->
+                            </div><!-- /control-group -->
+                        </div><!-- /small-6 columns -->
+                        <div class="small-6 columns">
+                            <div class="control-group">
+                                <label for="website" class="control-label">Tu sitio web:</label>
+                                <div class="controls">
+                                    <input class="small-12" type="url" name="contact_website" id="website">
+                                </div><!-- /controls -->
+                            </div><!-- /control-group -->
+                        </div><!-- /small-6 columns -->
+                    </div><!-- /row-fluid -->
+
+                    <div class="row">
+                        <div class="small-12">
+                            <div class="control-group">
+                                <label for="message" class="control-label">Tu mensaje:</label>
+                                    <textarea class="small-12" type="text" name="contact_message" id="message" rows="4"></textarea>
+                            </div><!-- /control-group -->
+                        </div><!-- /small-12 -->
+                    </div><!-- /row-fluid -->
+
+                    <input type="hidden" name="save" value="contact">
+                    <button type="submit" class="btn-inverse right">
+                        Enviar <span>Mensaje</span>
+                        <i class="fa fa-comment"></i>
+                    </button>
+                </form><!-- /form -->
+            </div><!-- /span8 -->
+        </div><!-- /row-fluid -->
+    </div><!-- /container-fluid -->
+</section>

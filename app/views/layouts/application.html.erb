@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="es"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="es"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="es"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="es"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+      <div class="fixed nav-custom">
+        <nav class="top-bar row">
+          <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+              <h1>
+                <a href="/" class="logo">
+                  <i class="fa fa-github"></i> Distrivending Group
+                </a>
+              </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a><span>Menu</span></a></li>
+          </ul>
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="left" id="top-nav-l">
+              <li class="divider"></li>
+              <li class="active">
+                <a href="/" id="home-link"> Inicio</a>
+              </li>
+
+              <li class="divider"> </li>
+              <li><a href="../store" id="store-link"> Tienda</a></li>
+
+              <li class="divider"></li>
+              <li><a href="../your_network" id="your-network-link"> Tu Negocio</a></li>
+
+              <li class="divider"></li>
+              <li><a href="../events" id="events-link"> Eventos</a></li>
+
+              <li class="divider"></li>
+              <li><a href="../current_goal" id="current-goal-link"> Testimonios</a></li>
+              <li class="divider"></li>
+            </ul>
+          </section>
+          <ul class="top-bar-section">
+            <ul class="right" id="top-nav-r">
+              <li class="divider"></li>
+              <%- if user_signed_in? %>
+                  <li class="active">
+                    <a href="<%= edit_user_registration_path %>">Editar Perfil</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="">
+                    \#{link_to "Salir", destroy_user_session_path, method: :delete, :class => 'primary'}
+                  </li>
+              <% else %>
+                  <li>
+                    <a class="success" href="<%= new_user_registration_path %>">Registrarse</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a class="primary" href="<%= new_user_session_path %>">Acceder</a>
+                  </li>
+              <% end %>
+              <li class="divider"></li>
+            </ul>
+            <form class="navbar-text pull-right">
+              <% if user_signed_in? %>
+                  Logged in as
+                  <%= succeed "." do %>
+                      <strong>
+                        <%= current_user.email %>
+                      </strong>
+                  <% end %>
+              <% end %>
+            </form>
+          </ul>
+        </nav>
+      </div>
+      <div class="row" id="yield">
+        <%= alert %>
+        <%= notice %>
+        <%= yield %>
+      </div>
+    <footer id="site-footer">
+      <div class="container">
+        <nav class="site-footer-social-links">
+          <ul>
+            <li>
+              <a href="http://www.facebook.com/distrivending.machines">
+                <p class="screen-reader-only">Facebook</p>
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/distrivending">
+                <p class="screen-reader-only">Twitter</p>
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.distrivending.com/ceo">
+                <p class="screen-reader-only">Distrivending</p>
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="site-footer-links site-footer-links--customers">
+          <ul>
+            <li><a href="" >Mapa del Sitio</a></li>
+            <li><a href="" >Blog</a></li>
+            <li><a href="" >Fotos</a></li>
+            <li><a href="" >Videos</a></li>
+            <li><a href="" >Preguntas Frecuentes</a></li>
+            <li><a href="" >Soporte Técnico</a></li>
+          </ul>
+        </nav>
+
+        <nav class="site-footer-links">
+          <ul>
+            <li><a href="/news"  data-track="Footer|News">Noticias</a></li>
+            <li><a href="/contact_us"  data-track="Footer|Contact Us">Contactenos</a></li>
+            <li><a href="/locations"  data-track="Footer|Locations">Localizanos</a></li>
+            <li><a href="/privacy"  data-track="Footer|Privacy Policy">Politica de Privacidad</a></li>
+            <li><a href="/terms"  data-track="Footer|Terms">Terminos de Uso</a></li>
+          </ul>
+        </nav>
+
+        <p class="text-center">
+          <!-- Copyright information. You can remove my site link. -->
+          Copyright © 2013 - 2014 <a href="../about_me">Distrivending Group</a> | Deseñado por <a href="www.umsoft-corp.com">UMSoft Corp</a>
+        </p>
+      </div>
+      <div class="site-footer-colors">
+        <i class="teal"></i>
+        <i class="red"></i>
+        <i class="green"></i>
+        <i class="yellow"></i>
+      </div>
+    </footer>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
